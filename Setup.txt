@@ -1,0 +1,24 @@
+Install Python 3.
+
+Upgrade pip (Python package manager) : python -m pip install --upgrade pip  
+
+Install virtualenv (virtual environemnt): python -m pip install --user virtualenv
+
+Creating a virtual environment : python -m venv env
+
+Activating a virtual environment : .\env\Scripts\activate - Leaving the virtual environment : deactivate
+
+Upgrade pip for virtual environment : python -m pip install --upgrade pip
+
+Install package:
+
+	- pip install pocketshpinx
+	- pip install flask
+	- pip install pydub
+	- pip install json (thường là có sẵn)
+	- pip install urllib (thường là có sẵn)
+
+
+-- Choose Python.exe from env/Scripts for intepreter
+
+Run app.py
