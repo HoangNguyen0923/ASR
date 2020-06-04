@@ -9,11 +9,11 @@ app = Flask(__name__)
 def api_speech_analyze():
   srcUrl = request.form['file']
   
-  src = ''
-  if (srcUrl.startswith('http')):
-    src = WriteFileFromLink(srcUrl)
-  else:
-    src = srcUrl
+  src = WriteFileFromLink(srcUrl)
+  #if (srcUrl.startswith('http')):
+  #  src = WriteFileFromLink(srcUrl)
+  #else:
+  #  src = srcUrl
 
   if src.rsplit('.', 1)[1] == 'flac':
     src = ConvertFlacToWav(src)

@@ -4,6 +4,7 @@ from pydub import AudioSegment
 from urllib.request import urlopen
 
 MODELDIR = "en-us-adapt"
+RESULT = "Result"
 
 def ConvertMp3ToWav(srcPath):
     sound = AudioSegment.from_mp3(srcPath)
@@ -20,9 +21,9 @@ def ConvertFlacToWav(srcPath):
 def WriteFileFromLink(srcUrl):
   src = urlopen(srcUrl)
   getFileName = srcUrl.rsplit('/', 1)[1]
-  with open('./{0}'.format(getFileName),'wb') as output:
+  with open('./{0}/{1}'.format(RESULT,getFileName),'wb') as output:
     output.write(src.read())
-  return getFileName
+  return '{0}/{1}'.format(RESULT,getFileName)
 
 def Process(srcPath):
     config = Decoder.default_config()
