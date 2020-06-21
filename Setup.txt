@@ -12,7 +12,7 @@ Upgrade pip for virtual environment : python -m pip install --upgrade pip
 
 Install package:
 
-	- pip install pocketshpinx
+	- pip install pocketsphinx
 	- pip install flask
 	- pip install pydub
 	- pip install json (thường là có sẵn)
